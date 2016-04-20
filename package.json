@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "main": "index.js",
+  "version": "0.0.0",
+  "devDependencies": {
+    "node-sass": "3.4.2",
+    "npm-run-all": "1.7.0",
+    "phlite-cookie-notice": "github:phlitewebsites/phlite-cookie-notice#v2.1.0",
+    "phlite-old-browser-notice": "github:phlitewebsites/phlite-old-browser-notice#v2.0.0",
+    "phlite-browsersync-config": "github:phlitewebsites/phlite-browsersync-config#v2.0.0",
+    "phlite-postcss-config": "github:phlitewebsites/phlite-postcss-config#v2.0.0",
+    "phlite-prototype-server": "github:phlitewebsites/phlite-prototype-server#v1.6.0",
+    "phlite-sass-mixins": "github:phlitewebsites/phlite-sass-mixins#v1.0.0",
+    "phlite-style-reset": "github:phlitewebsites/phlite-style-reset#v2.2.0",
+    "phlite-stylelint-config": "github:phlitewebsites/phlite-stylelint-config#v1.0.1",
+    "phlite-webpack-config": "github:phlitewebsites/phlite-webpack-config#v2.0.0"
+  },
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "node index",
+    "test": "npm-run-all --parallel test:*",
+    "build": "npm-run-all --parallel build:*",
+    "watch": "npm-run-all --parallel watch:*",
+    "develop": "npm-run-all --parallel watch start browser-sync",
+    "dev": "npm run develop --silent",
+    "//styles": "",
+    "sass": "node-sass src/styles --output build/temp/css --source-map public/css --include-path node_modules",
+    "postcss": "postcss --config build/postcss.config.js --dir public/css build/temp/css/*.css",
+    "test:styles": "stylelint src/styles/**/*.scss --syntax scss --config build/stylelint.config.js",
+    "build:styles": "npm-run-all --sequential sass postcss",
+    "watch:styles": "npm-run-all --sequential build:styles --parallel \"sass -- --watch --recursive\" \"postcss -- --watch\"",
+    "//scripts": "",
+    "test:scripts": "semistandard",
+    "build:scripts": "webpack --config build/webpack.config.js",
+    "watch:scripts": "npm run build:scripts -- --watch",
+    "//server": "",
+    "browser-sync": "browser-sync start --config build/browsersync.config.js"
+  },
+  "semistandard": {
+    "ignore": "public/**"
+  }
+}

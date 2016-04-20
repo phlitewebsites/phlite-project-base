@@ -1,0 +1,14 @@
+# npm dependencies
+node_modules
+
+# generated files
+public/assets
+public/css
+public/js
+public/images/content
+public/downloads/content
+
+# system files
+*.log
+Thumbs.db
+.DS_Store

@@ -1,0 +1,58 @@
+:root {
+  min-width: 320px;
+}
+
+.main-container {
+  max-width: $width--container;
+  margin: auto;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 ($spacing--secondary);
+
+  @include bp(medium) {
+    padding: 0 ($spacing--primary);
+  }
+}
+
+.content {
+  padding: $spacing--secondary;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @include bp(medium) {
+    flex-flow: row wrap;
+  }
+}
+
+.primary-content {
+  background: #fff;
+  max-width: 100%;
+
+  @include bp(medium) {
+    flex: 1 1 0;
+
+    &:not(:only-child) {
+      margin-right: $spacing--primary;
+    }
+  }
+}
+
+.secondary-content {
+  margin: $spacing--primary auto 0;
+  max-width: $secondary-content-width;
+
+  @include bp(medium) {
+    flex: 0 0 $secondary-content-width;
+    margin: 0;
+  }
+}
+
+.cf {
+  @include clear-fix;
+}

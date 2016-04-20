@@ -1,0 +1,17 @@
+@import 'phlite-sass-mixins/lib/pixel-conversions';
+
+// @include fontface('font-name', '/path/to/font/file/excluding/extension');
+
+$font-family--primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary: $font-family--primary;
+
+$font-size--primary: 16px;
+$font-size--h1: 16px;
+$font-size--h2: 16px;
+$font-size--h3: 16px;
+$font-size--h4: 16px;
+$font-size--h5: 16px;
+$font-size--h6: 16px;
+
+$line-height--primary: (24px / $font-size--primary);
+$line-height--secondary: (19px / $font-size--primary);
