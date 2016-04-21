@@ -3,17 +3,17 @@
   "main": "index.js",
   "version": "0.0.0",
   "devDependencies": {
-    "node-sass": "3.4.2",
+    "node-sass": "3.5.1",
     "npm-run-all": "1.7.0",
     "phlite-cookie-notice": "github:phlitewebsites/phlite-cookie-notice#v2.1.0",
     "phlite-old-browser-notice": "github:phlitewebsites/phlite-old-browser-notice#v2.0.0",
     "phlite-browsersync-config": "github:phlitewebsites/phlite-browsersync-config#v2.0.0",
     "phlite-postcss-config": "github:phlitewebsites/phlite-postcss-config#v2.0.0",
-    "phlite-prototype-server": "github:phlitewebsites/phlite-prototype-server#v1.6.0",
-    "phlite-sass-mixins": "github:phlitewebsites/phlite-sass-mixins#v1.0.0",
+    "phlite-prototype-server": "github:phlitewebsites/phlite-prototype-server#v1.7.0",
+    "phlite-sass-mixins": "github:phlitewebsites/phlite-sass-mixins#v1.0.1",
     "phlite-style-reset": "github:phlitewebsites/phlite-style-reset#v2.2.0",
     "phlite-stylelint-config": "github:phlitewebsites/phlite-stylelint-config#v1.0.1",
-    "phlite-webpack-config": "github:phlitewebsites/phlite-webpack-config#v2.0.0"
+    "phlite-webpack-config": "github:phlitewebsites/phlite-webpack-config#v2.1.0"
   },
   "scripts": {
     "postinstall": "npm run build",
